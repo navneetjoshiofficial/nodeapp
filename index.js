@@ -23,7 +23,7 @@ var fs = require('fs');
 
 
 server.connection({
-   host: 'localhost',
+   //host: 'localhost',
   //  tls: tls,
     port: process.env.PORT || 8000
 });
