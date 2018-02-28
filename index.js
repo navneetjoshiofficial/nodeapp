@@ -21,11 +21,14 @@ const pusher = new Pusher({
 
 var fs = require('fs');
 
-
+var tls = {
+    key: fs.readFileSync('/keys/localhost.key'),
+    cert: fs.readFileSync('/keys/localhost.crt')
+};
 server.connection({
-  host: '138.68.160.78',
-  //  tls: tls,
-    port: process.env.PORT || 8000
+   //host: 'localhost',
+    tls: tls,
+    port: 443
 });
 let channels = new Set();
 console.log(channels);
