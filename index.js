@@ -26,7 +26,7 @@ var tls = {
     cert: fs.readFileSync('/keys/localhost.crt')
 };
 server.connection({
-   //host: 'localhost',
+    host: 'localhost',
     tls: tls,
     port: 443
 });
